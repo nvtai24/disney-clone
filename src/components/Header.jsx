@@ -38,10 +38,18 @@ function Header() {
           {menu.map(
             (item, index) => index < 3 && <HeaderItem Icon={item.icon} />
           )}
-          <div className="flex items-center" onClick={() => document.querySelector("#dropdown").classList.toggle("hidden")}>
+          <div
+            className="flex items-center"
+            onClick={() =>
+              document.querySelector("#dropdown").classList.toggle("hidden")
+            }
+          >
             <HeaderItem Icon={HiDotsVertical} />
           </div>
-          <div className="hidden absolute mt-12 ml-20 bg-black rounded-lg p-4 flex flex-col gap-2 border border-gray-700" id="dropdown">
+          <div
+            className="hidden absolute mt-12 ml-20 bg-black rounded-lg p-4 flex flex-col gap-2 border border-gray-700 z-50"
+            id="dropdown"
+          >
             {menu.map(
               (item, index) =>
                 index > 2 && <HeaderItem name={item.name} Icon={item.icon} />
