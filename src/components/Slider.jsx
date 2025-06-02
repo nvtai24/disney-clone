@@ -46,7 +46,7 @@ function Slider() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative mb-8">
       <HiChevronLeft
         className="hidden md:block text-white text-[30px] absolute left-0 top-1/2 -translate-y-1/2 cursor-pointer z-10"
         onClick={sliderLeft}
